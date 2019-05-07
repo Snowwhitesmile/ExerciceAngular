@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+'list-group-item-success': count > 0,
+'list-group-item-danger': count < 0}">
+      <p style="text-align: right">{{day | date}}</p>
+        <h2>{{postTitle}}</h2>
+      <p>{{postContent}}</p>
+
+      <div>
+          <button (click)="Like()" class="btn btn-success">Like {{count}}</button>
+          <button (click)="Dislike()" class="btn btn-danger">Dislike</button>
+      </div>
+</li>
